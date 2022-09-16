@@ -45,3 +45,14 @@ const game = (element, index) => {
         }
     }
 };
+
+//restart the game by empty  all the variables
+function restart() {
+    cells = ['', '', '', '', '', '', '', '', ''];
+    btns.forEach((btn) => {
+        btn.value = '';
+    });
+    player= 'yellow';
+    turn.innerHTML = `Player yellow Turn`;
+    btns.forEach((btn) => btn.disabled = false);
+};
